@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 // JSX = Javascript + XML (HTML)
 import { Post } from "./components/Post.jsx";
 import { Header } from "./components/Header";
@@ -16,8 +15,8 @@ const posts = [
     },
     content: [
       { type: 'paragraph', content: 'Fala galeraa, O salomão foi promovido a Analista de TI e so faz merda', },
-      { type: 'paragraph', content: 'Fala galeraa,', },
-      { type: 'link', content: 'jane.design/doctorcare,', },
+      { type: 'paragraph', content: 'Hoje eu to desenvolvendo em ReactJs, Muito foda!!', },
+      { type: 'link', content: 'github.com/gustavuhh1', },
     ],
     publishedAt: new Date('2022-05-03 20:00:00'),
   },
@@ -29,9 +28,9 @@ const posts = [
       role: 'Monitor Dev'
     },
     content: [
-      { type: 'paragraph', content: 'Fala galeraa,', },
-      { type: 'paragraph', content: 'Fala galeraa,', },
-      { type: 'link', content: 'jane.design/doctorcare,', },
+      { type: 'paragraph', content: 'TUMANU CUN MAN, SI FUDER SOU ESCRIVÃO DE MERDA', },
+      { type: 'paragraph', content: 'Fala will, vai te fuder vou dar essa aula não!! vlw vlw', },
+      { type: 'link', content: 'github.com/elishowbr', },
     ],
     publishedAt: new Date('2024-09-12 20:00:00'),
   }
@@ -49,11 +48,14 @@ export function App() {
         <Sidebar />
         <main>
           {posts.map(post => {
-            return (<Post
+            return (
+            <Post
+            key={post.id}
             author={post.author}
             content={post.content}
             publishedAt={post.publishedAt}
-            />)
+            />
+          )
 
 
           })}
