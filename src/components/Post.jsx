@@ -46,11 +46,11 @@ export function Post({ author, publishedAt, content}) {
     }
 
     function deleteComment(commentTOdelete){
-        const commentsWithouDeletedOne = comments.filter(comment => {
+        const commentsWithoutDeletedOne = comments.filter(comment => {
             return comment !== commentTOdelete
         })
 
-        setComments(commentsWithouDeletedOne);
+        setComments(commentsWithoutDeletedOne);
     }
 
     const isNewCommentEmpty = newCommentText.length === 0
